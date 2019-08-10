@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Блогеры Инстаграма v2.4</title>
+  <link rel="shortcut icon" href="img/icons/favicon.ico" />
+  <link rel="stylesheet" href="/css/vendor.min.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap&subset=cyrillic" rel="stylesheet">
+<body>
+
+
+
+<header class="header">
+  <div class="container flex">
+    <div class="header__logo flex">
+      <a href="#" class="header__logo__img">
+        <img src="/img/icons/logo.png" alt="">
+      </a>
+      <div class="header__logo__right">
+        <a href="#" class="header__logo__name">
+          Блогеры Инстаграма v2.4
+        </a>
+        <a href="#" class="header__logo__inst">
+          @easyprbot
+        </a>
+      </div>
+    </div>
+    <div class="header__nav__container">
+      <div class="nav__mob__title flex">
+        Меню
+        <a href="#" class="vav__close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1L13 13M13 1L1 13" stroke="#B4BDC1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <ul class="header__nav__ul flex">
+        <li>
+          <a href="#">
+            Все блогеры
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Гивы
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Мои промокоды
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Предложить блогера
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Mой заказ
+            <span>0</span>
+          </a>
+        </li>
+      </ul>
+      <div class="nav__overlay"></div>
+    </div>
+    <a href="#" class="hamburger__button">
+      <span></span><span></span><span></span>
+    </a>
+  </div>
+</header>
+
+
+<div class="wrapper">
+    
+    
+    <div class="popup_nav">
+        <a href="#payActive" class="openPopup">Форма оплаты активна</a>
+        <a href="#payDisabled" class="openPopup">Форма оплаты неактивна</a>
+        <a href="#payError" class="openPopup">Форма оплаты заполнена неверно</a>
+        <a href="#admin" class="openPopup">Админка</a>
+        <a href="#adminError" class="openPopup">Админка заполнено неверно</a>
+        <a href="#autorization" class="openPopup">Авторизация</a>
+        <a href="#autorizationError" class="openPopup">Авторизация заполнено неверно</a>
+        <a href="#forgetPass" class="openPopup">Забыли пароль</a>
+        <a href="#" class="forgetPassLast">Новый пароль отправлен на почту</a>
+        <span>Навигация в прототипе</span>
+    </div>
+
+
+</div>
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__links flex">
+      <a href="#">Написать в техподдержку</a>
+      <a href="#">Пользовательское соглашение</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #424858;
+  }
+  .footer__links {
+    justify-content: center;
+  }
+  .footer__links a {
+    color: #fff;
+    font-size: 16px;
+    line-height: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  @media screen and (max-width: 550px) {
+    .footer {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    .footer__links a {
+      width: 100%;
+      line-height: 26px;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+</style>
+
+
+
+
+<div id="payActive" class="popup__container popup__pay">
+    <div class="popup__inner">
+        <div class="popups__overlay"></div>
+        <div class="popup">
+            <a href="#" class="popup__close_reg">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.5" d="M1 1L11 11M11 1L1 11" stroke="#6A7B83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <form class="pay__container">
+                <div class="popup__content pay__content">
+                    <div class="popup__title">
+                        Форма оплаты
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Количество аккаунтов
+                        </div>
+                        <input type="number" name="count_acaunt" placeholder="Например, 5" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Стоимость участия в рублях
+                        </div>
+                        <input type="number" name="price" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Ваш e-mail (пришлем подтверждение)
+                        </div>
+                        <input type="email" name="email" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Список аккаунтов (в столбик через @, без нумерации)
+                        </div>
+                        <textarea name="text" class="popupTextarea" placeholder="Например, @alexandramitroshina"></textarea>
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="sum_of_pay">
+                        Сумма к оплате: 0 ₽
+                    </div>
+                    <input type="submit" name="submitPay" value="Оплатить" class="submit_pay">
+                    <div class="label__popup agreeLabel flex">
+                        <input type="checkbox" name="agreeReg" value="огласие на регистрацию" class="agreeInput">
+                        <div class="inputFalse">&#x2714;</div>
+                        <div class="agree__text">
+                            Нажимая на кнопку “Оплатить”, я даю согласие на <a href="#" target="_blank">обработку персональных данных</a>, принимаю условия <a href="#" target="_blank">публичной оферты</a> и соглашаюсь с <a href="#" target="_blank">политикой конфиденциальности</a>.
+                        </div>
+                        <div class="error__text">
+                            Выберите чекбокс, чтобы продолжить
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="payDisabled" class="popup__container popup__pay">
+    <div class="popup__inner">
+        <div class="popups__overlay"></div>
+        <div class="popup">
+            <a href="#" class="popup__close_reg">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.5" d="M1 1L11 11M11 1L1 11" stroke="#6A7B83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <form class="pay__container">
+                <div class="popup__content pay__content">
+                    <div class="popup__title">
+                        Приём оплат завершен. Следите за обновлениями.
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Количество аккаунтов
+                        </div>
+                        <input type="number" disabled name="count_acaunt" placeholder="Например, 5" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Стоимость участия в рублях
+                        </div>
+                        <input type="number" disabled name="price" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Ваш e-mail (пришлем подтверждение)
+                        </div>
+                        <input type="email" disabled name="email" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Список аккаунтов (в столбик через @, без нумерации)
+                        </div>
+                        <textarea name="text" disabled class="popupTextarea" placeholder="Например, @alexandramitroshina"></textarea>
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="sum_of_pay">
+                        Сумма к оплате: 0 ₽
+                    </div>
+                    <input type="submit" disabled name="submitPay" value="Оплатить" class="submit_pay">
+                    <div class="label__popup agreeLabel flex">
+                        <input type="checkbox" name="agreeReg" value="огласие на регистрацию" class="agreeInput">
+                        <div class="inputFalse disabled">&#x2714;</div>
+                        <div class="agree__text">
+                            Нажимая на кнопку “Оплатить”, я даю согласие на <a href="#" target="_blank">обработку персональных данных</a>, принимаю условия <a href="#" target="_blank">публичной оферты</a> и соглашаюсь с <a href="#" target="_blank">политикой конфиденциальности</a>.
+                        </div>
+                        <div class="error__text">
+                            Выберите чекбокс, чтобы продолжить
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="payError" class="popup__container popup__pay">
+    <div class="popup__inner">
+        <div class="popups__overlay"></div>
+        <div class="popup">
+            <a href="#" class="popup__close_reg">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.5" d="M1 1L11 11M11 1L1 11" stroke="#6A7B83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <form class="pay__container">
+                <div class="popup__content pay__content">
+                    <div class="popup__title">
+                        Форма оплаты
+                    </div>
+                    <div class="label__popup errorInput flex">
+                        <div class="input__title">
+                            Количество аккаунтов
+                        </div>
+                        <input type="number" name="count_acaunt" placeholder="Например, 5" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="label__popup errorInput flex">
+                        <div class="input__title">
+                            Стоимость участия в рублях
+                        </div>
+                        <input type="number" name="price" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="label__popup errorInput flex">
+                        <div class="input__title">
+                            Ваш e-mail (пришлем подтверждение)
+                        </div>
+                        <input type="email" name="email" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="label__popup errorInput flex">
+                        <div class="input__title">
+                            Список аккаунтов (в столбик через @, без нумерации)
+                        </div>
+                        <textarea name="text" class="popupTextarea" placeholder="Например, @alexandramitroshina"></textarea>
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="sum_of_pay">
+                        Сумма к оплате: 0 ₽
+                    </div>
+                    <input type="submit" name="submitPay" value="Оплатить" class="submit_pay">
+                    <div class="label__popup errorInput agreeLabel flex">
+                        <input type="checkbox" name="agreeReg" value="огласие на регистрацию" class="agreeInput">
+                        <div class="inputFalse">&#x2714;</div>
+                        <div class="agree__text">
+                            Нажимая на кнопку “Оплатить”, я даю согласие на <a href="#" target="_blank">обработку персональных данных</a>, принимаю условия <a href="#" target="_blank">публичной оферты</a> и соглашаюсь с <a href="#" target="_blank">политикой конфиденциальности</a>.
+                        </div>
+                        <div class="error__text">
+                            Выберите чекбокс, чтобы продолжить
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div id="admin" class="popup__container popup__admin">
+    <div class="popup__inner">
+        <div class="popups__overlay"></div>
+        <div class="popup">
+            <a href="#" class="popup__close_reg">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.5" d="M1 1L11 11M11 1L1 11" stroke="#6A7B83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <form class="admin__container">
+                <div class="popup__content admin__content">
+                    <div class="popup__title">
+                        Админ панель
+                    </div>
+                    <div class="input__title">
+                        Прием оплаты
+                    </div>
+                    <div class="admin__handles flex">
+                        <div class="admin__handle_container">
+                            <input type="radio" name="get_pay" id="inputOn" class="adminInput">
+                            <label for="inputOn" class="admin__label handleOn">
+                                Вкл.
+                            </label>
+                        </div>
+                        <div class="admin__handle_container">
+                            <input type="radio" checked name="get_pay" id="inputOff" class="adminInput">
+                            <label for="inputOff" class="admin__label handleOff">
+                                Выкл.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Проценты
+                        </div>
+                        <input type="number" name="parcent" placeholder="" class="popup__input">
+                    </div>
+                </div>
+                <div class="popup__content">
+                    <div class="label__popup">
+                        <div class="input__title flex">
+                            Старый пароль
+                        </div>
+                        <input type="password" name="oldPassword" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="label__popup">
+                        <div class="input__title flex">
+                            Новый пароль
+                        </div>
+                        <input type="password" name="newPassword" class="popup__input">
+                        <div class="error__text startError">
+                            От 6 символов. Минимум по 1 букве верхнего  и нижнего регистра
+                        </div>
+                    </div>
+                    <div class="label__popup">
+                        <div class="input__title flex">
+                            Повторите новый пароль
+                        </div>
+                        <input type="password" name="passwordRep" class="popup__input">
+                        <div class="error__text">
+                            Пароли не совпадают
+                        </div>
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Почта для восстановления пароля
+                        </div>
+                        <input type="email" name="email" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <input type="submit" name="submitAdmin" value="Сохранить" class="submit_admin">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="adminError" class="popup__container popup__admin">
+    <div class="popup__inner">
+        <div class="popups__overlay"></div>
+        <div class="popup">
+            <a href="#" class="popup__close_reg">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.5" d="M1 1L11 11M11 1L1 11" stroke="#6A7B83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <form class="admin__container">
+                <div class="popup__content admin__content">
+                    <div class="popup__title">
+                        Админ панель
+                    </div>
+                    <div class="input__title">
+                        Прием оплаты
+                    </div>
+                    <div class="admin__handles flex">
+                        <div class="admin__handle_container">
+                            <input type="radio" name="get_pay" id="inputOn" class="adminInput">
+                            <label for="inputOn" class="admin__label handleOn">
+                                Вкл.
+                            </label>
+                        </div>
+                        <div class="admin__handle_container">
+                            <input type="radio" checked name="get_pay" id="inputOff" class="adminInput">
+                            <label for="inputOff" class="admin__label handleOff">
+                                Выкл.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Проценты
+                        </div>
+                        <input type="number" name="parcent" placeholder="" class="popup__input">
+                    </div>
+                </div>
+                <div class="popup__content">
+                    <div class="label__popup errorInput">
+                        <div class="input__title flex">
+                            Старый пароль
+                        </div>
+                        <input type="password" name="oldPassword" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="label__popup errorInput">
+                        <div class="input__title flex">
+                            Новый пароль
+                        </div>
+                        <input type="password" name="newPassword" class="popup__input">
+                        <div class="error__text startError">
+                            От 6 символов. Минимум по 1 букве верхнего  и нижнего регистра
+                        </div>
+                    </div>
+                    <div class="label__popup errorInput">
+                        <div class="input__title flex">
+                            Повторите новый пароль
+                        </div>
+                        <input type="password" name="passwordRep" class="popup__input">
+                        <div class="error__text">
+                            Пароли не совпадают
+                        </div>
+                    </div>
+                    <div class="label__popup errorInput flex">
+                        <div class="input__title">
+                            Почта для восстановления пароля
+                        </div>
+                        <input type="email" name="email" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <input type="submit" name="submitAdmin" value="Сохранить" class="submit_admin">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div id="autorization" class="popup__container popup__autorization">
+    <div class="popup__inner">
+        <div class="popups__overlay"></div>
+        <div class="popup">
+            <a href="#" class="popup__close_reg">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.5" d="M1 1L11 11M11 1L1 11" stroke="#6A7B83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <form class="enter__container">
+                <div class="popup__content autorization__content">
+                    <div class="popup__title">
+                        Авторизация
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            E-mail
+                        </div>
+                        <input type="email" name="login" placeholder="" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Пароль
+                        </div>
+                        <a href="#" class="gorget__pass">Забыли пароль?</a>
+                        <input type="password" name="password" class="popup__input">
+                        <div class="error__text">
+                            От 6 символов. Минимум по 1 букве верхнего и нижнего регистра
+                        </div>
+                    </div>
+                    <input type="submit" name="submitAutor" value="Войти" class="submit_autor">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="autorizationError" class="popup__container popup__autorization">
+    <div class="popup__inner">
+        <div class="popups__overlay"></div>
+        <div class="popup">
+            <a href="#" class="popup__close_reg">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.5" d="M1 1L11 11M11 1L1 11" stroke="#6A7B83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <form class="enter__container">
+                <div class="popup__content autorization__content">
+                    <div class="popup__title">
+                        Авторизация
+                    </div>
+                    <div class="label__popup errorInput flex">
+                        <div class="input__title">
+                            E-mail
+                        </div>
+                        <input type="email" name="login" placeholder="" class="popup__input">
+                        <div class="error__text">
+                            Заполните поле, чтобы продолжить
+                        </div>
+                    </div>
+                    <div class="label__popup errorInput flex">
+                        <div class="input__title">
+                            Пароль
+                        </div>
+                        <a href="#" class="gorget__pass">Забыли пароль?</a>
+                        <input type="password" name="password" class="popup__input">
+                        <div class="error__text">
+                            От 6 символов. Минимум по 1 букве верхнего и нижнего регистра
+                        </div>
+                    </div>
+                    <input type="submit" name="submitAutor" value="Войти" class="submit_autor">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div id="forgetPass" class="popup__container popup__forgetPass">
+    <div class="popup__inner">
+        <div class="popups__overlay"></div>
+        <div class="popup">
+            <a href="#" class="popup__close_reg">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.5" d="M1 1L11 11M11 1L1 11" stroke="#6A7B83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <form class="forgetPass__container">
+                <div class="popup__content forgetPass__content">
+                    <div class="forgetPass__top">
+                        <div class="popup__title">
+                            Восстановление пароля
+                        </div>
+                        <div class="label__popup flex">
+                            <div class="input__title">
+                                Почта для восстановления пароля
+                            </div>
+                            <input type="email" name="login" placeholder="" class="popup__input">
+                            <div class="error__text">
+                                Заполните поле, чтобы продолжить
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" name="submitAutor" value="Почта для восстановления пароля" class="submit_forget">
+                </div>
+                <div class="popup__content forgetPass__content forgetLast">
+                    <div class="popup__title">
+                        Новый пароль отправлен на почту
+                    </div>
+                    <a href="#" class="backAuthor">Назад к авторизации</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/vendor.min.js"></script>
+<script src="js/custom.min.js"></script>
+
+    <script>
+        $(".forgetPass__container").submit(function() {
+            var th = $(this);
+            $.ajax({
+                type: "POST",
+                url: "/mail.php",
+                data: th.serialize()
+            }).done(function() {
+                setTimeout(function(){
+
+                }, 100);
+            });
+            return false;
+        });
+
+
+        $('.submit_forget').click(function (e) {
+            e.preventDefault();
+
+            $('.forgetLast').css({'display' : 'flex'});
+        })
+
+        $(".forgetPassLast").click(function (e) {
+            e.preventDefault();
+
+            $('#forgetPass').show();
+            $('.forgetLast').css({'display' : 'flex'});
+            $('body, html').css({'overflow' : 'hidden'});
+        });
+    </script>
+
+
+
+    <!--При ошибке к добавлять .label__popup класс .errorInput-->
+
+
+</body>
+</html>
