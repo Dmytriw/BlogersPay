@@ -8,7 +8,7 @@ $(function () {
         return false;
     });
 
-    $("input[type='tel']").mask("+7 (999) 999-99-99");
+    $("input[type='tel']").mask("+79999999999");
 
     $('input, textarea').focus(function () {
        $(this).closest('.label__popup').removeClass('errorInput');
@@ -29,13 +29,8 @@ $(function () {
             thisHref = $this.attr('href'),
             thisPopup = $(thisHref);
 
-        var scrollWidth = window.innerWidth - document.documentElement.clientWidth;
-
-        $('.popup__container').hide();
-        thisPopup.show();
-        $('body, html').css({'overflow' : 'hidden'});
-        $('html').css({'padding-right' : scrollWidth+'px'});
-        $('.header').css({'right' : scrollWidth+'px'});
+        $('.window__container').hide();
+        thisPopup.css({'display' : 'flex'});
     });
 
 
@@ -52,7 +47,7 @@ $(function () {
     $('.backAuthor').click(function (e) {
         e.preventDefault();
 
-        $('.popup__container').hide();
+        $('.window__container').hide();
         $('.forgetLast').show();
         $('#autorization').show();
     });
@@ -127,7 +122,5 @@ function closingPopups() {
         $('.popup__container').hide();
         $('.forgetLast').hide();
         $('body, html').css({'overflow' : 'visible'});
-        $('html').css({'padding-right' : '0'});
-        $('.header').css({'right' : '0'});
     });
 }

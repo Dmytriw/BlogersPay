@@ -1,22 +1,26 @@
 .popups__overlay {
   position: absolute;
-  z-index: 30;
+  z-index: 5;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
 
-.popup__container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.window__container {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
   display: none;
-  z-index: 60;
-  background-color: rgba(0, 0, 0, .5);
-  overflow-y: scroll;
+  padding-bottom: 30px;
+
+  .popups__overlay {
+    display: none;
+  }
+}
+
+.window__container {
 
   .popup {
     width: 435px;
@@ -69,7 +73,6 @@
   border-radius: 10px;
   padding-bottom: 30px;
   width: 350px;
-  z-index: 50;
   position: relative;
 }
 
@@ -99,7 +102,7 @@
   justify-content: center;
   top: -14px;
   right: -14px;
-  z-index: 20;
+  z-index: 5;
 }
 
 .popup__content {
@@ -260,6 +263,12 @@ button {
   &.checked {
     .inputFalse {
       color: #192229;
+      background: #3897F0;
+      border: 1px solid #3897F0;
+
+      svg {
+        opacity: 1;
+      }
     }
   }
 }
@@ -281,7 +290,8 @@ button {
     height: 12px;
   }
   svg {
-    height: 12px;
+    height: 10px;
+    opacity: 0;
   }
 }
 
@@ -354,11 +364,15 @@ textarea:disabled {
 }
 
 .inputFalse.disabled {
-  background: #F8F8F8;
-  border: 1px solid #D5DFE4;
+  background: #F8F8F8 !important;
+  border: 1px solid #D5DFE4 !important;
   border-radius: 3px;
   font-size: 0 !important;
   cursor: default;
+
+  svg {
+    opacity: 0 !important;
+  }
 }
 
 
@@ -484,6 +498,9 @@ textarea:disabled {
   padding-left: 45px;
   padding-top: 100px;
   max-width: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
   a {
     font-size: 16px;
     line-height: 24px;
@@ -499,6 +516,17 @@ textarea:disabled {
 }
 
 
+
+@media screen and (max-width: 1170px) {
+  .popup_nav {
+    position: static;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 433px;
+  }
+}
 
 
 @media screen and (max-width: 500px) {
@@ -527,6 +555,12 @@ textarea:disabled {
   }
   .popup__title {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .window__container .popup__title {
+    font-size: 23px;
   }
 }
 
