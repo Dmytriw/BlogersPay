@@ -40,17 +40,17 @@ p {
   margin: 0;
 }
 
-input {
+.popup__container input {
   outline: none;
   border: none;
 }
 
-textarea {
+.popup__container textarea {
   outline: none;
   border: none;
 }
 
-select {
+.popup__container select {
   outline: none;
   border: none;
 }
@@ -108,7 +108,7 @@ select {
 }
 
 
-input, select, textarea {
+.window__container input, .window__container select, .window__container textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -120,7 +120,7 @@ input, select, textarea {
   padding-top: 3px;
 }
 
-input[type="text"], input[type="email"], input[type="search"], input[type="password"] {
+.window__container input[type="text"], input[type="email"], .window__container input[type="search"], .window__container input[type="password"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -131,21 +131,21 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   color: #B4BDC1;
 }
 
-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.window__container input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color:  #B4BDC1;
   opacity: 1; /* Firefox */
 }
 
-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.window__container input:-ms-input-placeholder { /* Internet Explorer 10-11 */
   color:  #B4BDC1;
 }
 
-input::-ms-input-placeholder { /* Microsoft Edge */
+.window__container input::-ms-input-placeholder { /* Microsoft Edge */
   color:  #B4BDC1;
 }
 
 
-label {
+.window__container label {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */

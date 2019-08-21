@@ -230,7 +230,7 @@
   color: #FFFFFF;
 }
 
-button {
+.window__container button {
   border: none !important;
   cursor: pointer;
 }
@@ -345,17 +345,17 @@ button {
   cursor: pointer;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+.window__container input[type=number]::-webkit-inner-spin-button,
+.window__container input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-input:disabled {
+.window__container input:disabled {
   background-color: #FAFAFA !important;
 }
 
-textarea:disabled {
+.window__container textarea:disabled {
   background-color: #FAFAFA !important;
 }
 
